@@ -16,5 +16,20 @@
 
             Console.WriteLine(result);
         }
+
+        /// <summary>
+        /// 2) Write a program which takes two numbers from the console and displays the maximum of the two.
+        /// </summary>
+        public void Exercise2()
+        {
+            Console.WriteLine("Enter a number");
+            int inputNumber1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter another number");
+            int inputNumber2 = Convert.ToInt32(Console.ReadLine());
+
+            int result = (inputNumber1 > inputNumber2) ? inputNumber1 : inputNumber2;
+            Console.WriteLine($"Max is {result}.");
+        }
     }
 }

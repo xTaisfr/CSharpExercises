@@ -6,7 +6,8 @@
         {
             Conditionals conditionals = new Conditionals();
 
-            conditionals.Exercise1();
+            //conditionals.Exercise1();
+            conditionals.Exercise2();
         }
     }
 }
