@@ -31,5 +31,28 @@
             int result = (inputNumber1 > inputNumber2) ? inputNumber1 : inputNumber2;
             Console.WriteLine($"Max is {result}.");
         }
+
+        ///<summary>
+        /// 3) Write a program and ask the user to enter the width and height of an image. 
+        /// Then tell if the image is landscape or portrait.
+        ///</summary>
+        public void Exercise3()
+        {
+            Console.WriteLine("Enter the height of the image:");
+            int inputHeight = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the width of the image:");
+            int inputWidth = Convert.ToInt32(Console.ReadLine());
+
+            var result = (inputHeight > inputWidth) ? ImageOrientation.Portrait : ImageOrientation.Landscape;
+
+            Console.WriteLine(result);
+        }
+
+        public enum ImageOrientation
+        {
+            Landscape,
+            Portrait
+        }
     }
 }

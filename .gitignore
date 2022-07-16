@@ -10,3 +10,4 @@ CSharpExercises/CSharpExercises/bin/Debug/net6.0/CSharpExercises.dll
 CSharpExercises/CSharpExercises/bin/Debug/net6.0/CSharpExercises.pdb
 CSharpExercises/CSharpExercises/obj/Debug/net6.0/CSharpExercises.dll
 CSharpExercises/CSharpExercises/obj/Debug/net6.0/CSharpExercises.pdb
+*.vsidx
