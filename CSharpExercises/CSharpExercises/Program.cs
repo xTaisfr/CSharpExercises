@@ -5,8 +5,10 @@
         static void Main(string[] args)
         {
             Conditionals conditionals = new Conditionals();
+            //conditionals.Exercise4();
 
-            conditionals.Exercise4();
+            Loops loops = new Loops();
+            loops.Exercise2();
         }
     }
 }
