@@ -70,7 +70,27 @@
         ///</summary>
         public void Exercise4()
         {
+            const int kmPerDemeritPoint = 5;
 
+            Console.WriteLine("Enter the speed limit");
+            int speedLimit = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the speed of the car");
+            int carSpeed = Convert.ToInt32(Console.ReadLine());
+
+            if(carSpeed <= speedLimit)
+            {
+                Console.WriteLine("Ok");
+            }
+            else
+            {
+                int demeritPoints = (carSpeed - speedLimit) / kmPerDemeritPoint;
+
+                if (demeritPoints > 12)
+                    Console.WriteLine("License Suspended");
+                else
+                    Console.WriteLine("Demerit points: " + demeritPoints);
+            }
         }
     }
 }
