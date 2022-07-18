@@ -36,13 +36,35 @@
                 Console.WriteLine("enter a number or \"ok\" to exit");
                 var input = Console.ReadLine();
 
-                if (input.ToLower() == "ok")
+                if (input?.ToLower() == "ok")
                     break;
 
-                numbersSum += int.Parse(input);
+                if (input != null)
+                    numbersSum += int.Parse(input);
             }
 
-            Console.WriteLine($"\nResultado: {numbersSum}");
+            Console.WriteLine($"\nSum of all numbers is: {numbersSum}");
+        }
+
+        ///<summary>
+        /// 3) Write a program and ask the user to enter a number. 
+        /// Compute the factorial of the number and print it on the console. 
+        /// For example, if the user enters 5, 
+        /// the program should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120.
+        ///</summary>
+        public void Exercise3()
+        {
+            long fatorial = 1;
+
+            Console.WriteLine("Enter a number: ");
+            var inputNumber = int.Parse(Console.ReadLine());
+
+            for (int i = inputNumber; i > 1; i--)
+            {
+                fatorial *= i;
+            }
+
+            Console.WriteLine($"{inputNumber}! = {fatorial}.");
         }
     }
 }

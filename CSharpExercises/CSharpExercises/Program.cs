@@ -8,7 +8,7 @@
             //conditionals.Exercise4();
 
             Loops loops = new Loops();
-            loops.Exercise2();
+            loops.Exercise3();
         }
     }
 }
