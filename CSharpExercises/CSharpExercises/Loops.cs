@@ -55,9 +55,13 @@
         public void Exercise3()
         {
             long fatorial = 1;
+            int inputNumber = 0;
 
             Console.WriteLine("Enter a number: ");
-            var inputNumber = int.Parse(Console.ReadLine());
+            var input = Console.ReadLine();
+
+            if (input != null)
+                inputNumber = int.Parse(input);
 
             for (int i = inputNumber; i > 1; i--)
             {
@@ -65,6 +69,67 @@
             }
 
             Console.WriteLine($"{inputNumber}! = {fatorial}.");
+        }
+
+        ///<summary>
+        /// 4) Write a program that picks a random number between 1 and 10. 
+        /// Give the user 4 chances to guess the number. 
+        /// If the user guesses the number, display “You won"; 
+        /// otherwise, display “You lost". 
+        /// (To make sure the program is behaving correctly, 
+        /// you can display the secret number on the console first.)
+        ///</summary>
+        public void Exercise4()
+        {
+            var random = new Random();
+            var input = 0;
+            var numeroSorteio = random.Next(1, 10);
+
+            //Console.WriteLine("Número da sorte é {0}", numeroSorteio);
+
+            for (int i = 1; i <= 4; i++)
+            {
+                Console.WriteLine("Digite o número da sorte:");
+
+                input = Convert.ToInt32(Console.ReadLine());
+
+                if (input == numeroSorteio)
+                {
+                    Console.WriteLine("Você acertou!!!");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Você errou :( \n");
+                }
+            }
+
+            Console.WriteLine("O número sorteado foi: {0}", numeroSorteio);
+        }
+
+        ///<summary>
+        /// 5) Write a program and ask the user to enter a series of numbers separated by comma. 
+        /// Find the maximum of the numbers and display it on the console. 
+        /// For example, if the user enters “5, 3, 8, 1, 4", the program should display 8
+        ///</summary>
+        public void Exercise5()
+        {
+            Console.Write("Enter commoa separated numbers: ");
+            var input = Console.ReadLine();
+
+            var numbers = input.Split(',');
+
+            // Assume the first number is the max 
+            var max = Convert.ToInt32(numbers[0]);
+
+            foreach (var str in numbers)
+            {
+                var number = Convert.ToInt32(str);
+                if (number > max)
+                    max = number;
+            }
+
+            Console.WriteLine("Max is " + max);
         }
     }
 }
