@@ -8,7 +8,10 @@
             //conditionals.Exercise4();
 
             Loops loops = new Loops();
-            loops.Exercise3();
+            //loops.Exercise3();
+
+            var textSolutions = new TextSolutions();
+            textSolutions.exercise1();
         }
-    }
+}
 }
