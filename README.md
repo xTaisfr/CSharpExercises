@@ -101,6 +101,50 @@ Neste repositório você encontra exercicios básicos de c#.
 - Manipulação de texto
   - Strings são imutáveis. Uma vez setadas, não podem ser alteradas. Exemplo:
 
-            var name = "Mosh";
-            name[0] = "N";
-            Console.WriteLine(name);
+          var name = "Mosh";
+          name[0] = "N";
+          Console.WriteLine(name);
+          //Resultado: error CS0200: Property or indexer 'string.this[int]' cannot be assigned to -- it is read only
+            
+  - **StringBuilder** apenas fornece métodos para manipular strings de forma rápida e eficiente. Porém não possui métodos para fazer buscas em strings. Caso precise realizar buscas em uma string em construção usando StringBuilder, é necessário converter para string antes, exemplo:
+  
+          var builder = new StringBuilder("Mosh");
+          var index = builder.ToString().IndexOf('M');
+          
+- Manipulando arquivos
+  - File, FileInfo: Fornecem métodos para criação, cópia, remoção, mover e abrir arquivos.
+       - **FileInfo:** Fornece métodos de instância. Recomendado para quando se tem muitas operações. Assim a verificação de segurança é feita somente uma vez, durante a criação da instância.
+    - **File:** Fornece métodos estáticos. Recomendado para quando se tem menos operações, como por exemplo pegar atributos de um arquivo, é mais conveniente usar os métodos estáticos. Toda vez que os métodos estáticos são chamados, o sistema operacional realiza verificações de segurança, para garantir que o usuário atual possui acesso ao arquivo. 
+  - Métodos úteis:
+  
+          Create()
+          Copy()
+          Delete()
+          Exists()
+          GetAttibutes()
+          Move()
+          ReadAllText()
+          
+   - Directory, DirectoryInfo: Classes para trabalhar com diretórios.
+     - **DirectoryInfo:** Fornece métodos de instância.
+     - **Directory:** Fornece métodos estáticos.
+
+  - Métodos úteis:
+  
+          CreateDirectory()
+          Delete()
+          Existis()
+          GetCurrentDirectory()
+          GetFiles()
+          Move()
+          GetLogicalDrives()
+
+  - Path: Fornece métodos para trabalhar com strings que contem o caminho do diretório.
+  
+          GetDirectoryName()
+          GetFileName()
+          GetExtension()
+          GetTempPath()
+
+
+
