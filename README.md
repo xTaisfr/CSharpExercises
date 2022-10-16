@@ -43,6 +43,58 @@ Neste repositório você encontra exercicios básicos de c#.
         //Resultado = 0
         
   - Array: O index do primeiro elemento começa em zero.
+  - Enums são integers internamente. O valor do primeiro membro de um enum (if not set) é zero.
+  
+        public enum CustomerType
+        {
+           Bronze,
+           Silver,
+           Gold
+        }
+
+        //What will be the output of this code?
+        var type = (int)CustomerType.Bronze;
+        Console.WriteLine(type):   
+        
+   - Exemplo com o valor setado:
    
+         enum ErrorCode : ushort
+         {
+             None = 0,
+             Unknown = 1,
+             ConnectionLost = 100,
+             OutlierReading = 200
+         }
 
+- Arrays e listas
+  - Arrays são de tamanho fixo enquanto listas tem tamanho dinâmico (Mais itens podem ser adicionados depois).
+  - Exemplo:   
+  
+          var numbers = new List<int>() { 1, 2, 3, 4, 5 };
+          var index = numbers.IndexOf(1);
 
+          Console.WriteLine(index);
+          //Resultado = 0
+          
+   - Acessar o último elemento de uma lista:
+            
+          list[list.Count - 1]
+ 
+ - Date and Time
+   - Data e horário atual:
+   
+          DateTime.Now; 
+   - Operações com data criam uma cópia na memória, exemplo:
+   
+          var dateTime = new DateTime(2015, 1, 1);
+          dateTime.AddYears(1);
+          Console.WriteLine(dateTime.Year);
+          // Resultado = 2015
+          
+   - Melhor forma de criar um objeto TimeSpan para representar 1 hora.
+   
+          TimeSpan.FromHours(1);
+      
+   - Obter o ano atual:
+   
+          DateTime.Now.Year;
