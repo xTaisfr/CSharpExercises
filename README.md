@@ -98,3 +98,9 @@ Neste repositório você encontra exercicios básicos de c#.
    - Obter o ano atual:
    
           DateTime.Now.Year;
+- Manipulação de texto
+  - Strings são imutáveis. Uma vez setadas, não podem ser alteradas. Exemplo:
+
+            var name = "Mosh";
+            name[0] = "N";
+            Console.WriteLine(name);
