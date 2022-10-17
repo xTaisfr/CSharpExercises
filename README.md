@@ -146,5 +146,15 @@ Neste repositório você encontra exercicios básicos de c#.
           GetExtension()
           GetTempPath()
 
+- Debugging
+  -    F9: BreakPoint;
+  -    F5: Modo debug; 
+  -    Shift F5: stop debug mode;
+  -    F10: step over;
+  -    F11: step into;
+  -    Shift F1: step out;
+  -    Debug > Window > Watch (janela que mostra a variavel e seus valores);
+  -    Debug > Window > Call Stack (Conferir ordem de execução por numeração da linha);
+  -    Debug > Window > Autos (Similar a janela watch porem gera as variaveis inspecionadas automaticamente);
 
 
